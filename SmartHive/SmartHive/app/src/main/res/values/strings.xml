@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">SmartHive</string>
+
+    <!--Toolbar menus-->
+    <string name="clear">Clear</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+
+    <!--Drawer Menus-->
+    <string name="logout">Esci</string>
+
+    <!--Login-->
+    <string name="login_dummy">Login</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <!--Login Validation-->
+    <string name="empty_email">Please provide a non empty email.</string>
+    <string name="invalid_email">Please provide a valid email.</string>
+    <string name="empty_password">Please provide a non empty password.</string>
+
+
+    <!--button-->
+    <string name="accedi">Accedi</string>
+    <string name="submit">Submit</string>
+
 </resources>
