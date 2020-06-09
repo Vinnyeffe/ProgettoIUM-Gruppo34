@@ -17,6 +17,8 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="noAccount">Non hai un account?</string>
+    <string name="registrati"><u><b>Registrati!</b></u></string>
 
     <!--Login Validation-->
     <string name="empty_email">Please provide a non empty email.</string>
