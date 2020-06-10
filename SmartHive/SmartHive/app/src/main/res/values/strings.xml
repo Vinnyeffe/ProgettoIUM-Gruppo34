@@ -17,8 +17,13 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="noAccount">Non hai un account?</string>
+    <string name="noAccount">Non hai un account? </string>
     <string name="registrati"><u><b>Registrati!</b></u></string>
+
+    <!--Registrazione-->
+    <string name="registrazione">Registrazione</string>
+    <string name="ripetiPassword">Ripeti Password</string>
+    <string name="RegistratiButton">Registrati</string>
 
     <!--Login Validation-->
     <string name="empty_email">Please provide a non empty email.</string>

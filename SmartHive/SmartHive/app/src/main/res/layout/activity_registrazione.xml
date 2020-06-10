@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Registrazione">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="400dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
             android:layout_marginTop="40dp"
-            android:text="@string/login_dummy"
+            android:text="@string/registrazione"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
             />
@@ -42,7 +42,7 @@
                 android:textColorHint="@color/gray"
                 app:hintTextAppearance="@style/TextStyle"
                 android:background="@drawable/edittext"
-               >
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -95,6 +95,36 @@
                     android:drawableLeft="@drawable/ic_baseline_lock_24"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ripetiPassword"
+                android:textColorHint="@color/gray"
+                app:hintTextAppearance="@style/TextStyle"
+                app:passwordToggleEnabled="false"
+                android:background="@drawable/edittext">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Ripetipassword"
+                    style="@style/TextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/input_border_bottom"
+                    android:cursorVisible="true"
+                    android:gravity="center|left|bottom"
+                    android:inputType="textPassword"
+                    android:maxLength="50"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black_effective"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_server_login"
@@ -105,39 +135,10 @@
                 android:layout_marginTop="30dp"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
-                android:text="@string/login"
-                android:onClick="loginCliccato"/>
+                android:text="@string/RegistratiButton"
+                android:onClick="registra"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/card"
-        android:layout_marginBottom="-50dp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
-
-        <TextView
-            style="style/TextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/noAccount"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            style="style/TextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="5dp"
-            android:text="@string/registrati"
-            android:textSize="16sp"
-            android:textColor="@color/colorYellow"
-            android:onClick="registratiCliccato"/>
-    </LinearLayout>
 
 </RelativeLayout>
