@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,14 +13,15 @@
     android:background="@drawable/sfondo">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="330dp"
-        android:layout_centerVertical="true"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="22dp"
-        android:id="@+id/card">
+        android:id="@+id/card"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
 
         <TextView
             style="@style/TextStyle.Heading"
@@ -116,7 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/card"
-        android:layout_marginBottom="-50dp"
+        android:layout_marginBottom="-40dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
 
@@ -124,7 +130,7 @@
             style="style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text="@string/noAccount"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -133,12 +139,13 @@
             style="style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
             android:text="@string/registrati"
             android:textSize="16sp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/black"
             android:onClick="registratiCliccato"/>
     </LinearLayout>
 
 </RelativeLayout>
+</ScrollView>
