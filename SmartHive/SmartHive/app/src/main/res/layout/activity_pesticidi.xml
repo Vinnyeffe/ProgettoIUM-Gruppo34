@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pesticidi">
+
+    <TextView
+        style="@style/TextStyle.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:text="@string/pesticidi"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvPesticidi"
+        />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvPesticidi"
+        android:text="@string/livello_pesticidi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvLivelloPesticidi"
+        android:textSize="18sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/barraPesticidi"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvLivelloPesticidi"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progress="24"
+        android:progressDrawable="@drawable/yellowprogress"/>
+
+    <TextView
+        android:id="@+id/myTextProgress"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/barraPesticidi"
+        android:layout_alignTop="@id/barraPesticidi"
+        android:layout_alignRight="@id/barraPesticidi"
+        android:layout_alignBottom="@id/barraPesticidi"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="24%"
+        android:textSize="28dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"
+        android:background="@drawable/bottom_bar"
+        app:itemIconTint="@color/black_effective"
+        app:itemTextColor="@color/black_effective" />
+
+</RelativeLayout>

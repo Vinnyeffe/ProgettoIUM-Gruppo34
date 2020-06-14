@@ -30,7 +30,13 @@
     <string name="invalid_email">Please provide a valid email.</string>
     <string name="empty_password">Please provide a non empty password.</string>
 
-
+    <!--Pagine Valori-->
+    <string name="pesticidi">Pesticidi</string>
+    <string name="livello_pesticidi">Livello dei pesticidi</string>
+    <string name="statoSalute">Stato di salute</string>
+    <string name="Contavoli">Conta voli</string>
+    <string name="parassiti">Presenza parassiti</string>
+    <string name="regina">Vitalità della regina</string>
     <!--button-->
     <string name="accedi">Accedi</string>
     <string name="submit">Submit</string>
