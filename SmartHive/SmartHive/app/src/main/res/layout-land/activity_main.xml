@@ -14,7 +14,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="500dp"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:cardCornerRadius="20dp"
@@ -41,7 +41,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
