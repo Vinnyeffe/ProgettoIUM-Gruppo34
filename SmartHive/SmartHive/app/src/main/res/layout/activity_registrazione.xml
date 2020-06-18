@@ -35,7 +35,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -43,6 +44,7 @@
                 android:textColorHint="@color/gray"
                 app:hintTextAppearance="@style/TextStyle"
                 android:background="@drawable/edittext"
+                android:id="@+id/tInputEmail"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -61,7 +63,7 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="10dp"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                    android:drawableLeft="@drawable/ic_outline_account_circle_24"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -74,7 +76,8 @@
                 android:textColorHint="@color/gray"
                 app:hintTextAppearance="@style/TextStyle"
                 app:passwordToggleEnabled="false"
-                android:background="@drawable/edittext">
+                android:background="@drawable/edittext"
+                android:id="@+id/tInputPassword">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -93,7 +96,7 @@
                     android:paddingBottom="10dp"
                     android:textColor="@color/black_effective"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_baseline_lock_24"/>
+                    android:drawableLeft="@drawable/ic_outline_lock_24"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +107,8 @@
                 android:textColorHint="@color/gray"
                 app:hintTextAppearance="@style/TextStyle"
                 app:passwordToggleEnabled="false"
-                android:background="@drawable/edittext">
+                android:background="@drawable/edittext"
+                android:id="@+id/tInputPasswordRipeti">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_Ripetipassword"
@@ -123,7 +127,7 @@
                     android:paddingBottom="10dp"
                     android:textColor="@color/black_effective"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_baseline_lock_24"/>
+                    android:drawableLeft="@drawable/ic_outline_lock_24"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

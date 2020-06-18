@@ -1,19 +1,95 @@
 package com.example.smarthive;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class Registrazione extends AppCompatActivity {
+    private TextInputEditText email;
+    private TextInputEditText password;
+    private TextInputEditText password2;
+    private LinearLayout linearLayout;
+    private TextView errortextView;
+    private LinearLayout.LayoutParams layoutParams;
+    private TextInputLayout textInputLayoutEmail, textInputLayoutPassword, textInputLayoutPassword2;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrazione);
+
+        email = findViewById(R.id.et_email);
+        password = findViewById(R.id.et_password);
+        password2 = findViewById(R.id.et_Ripetipassword);
+        linearLayout=findViewById(R.id.linearLayout);
+        textInputLayoutEmail=findViewById(R.id.tInputEmail);
+        textInputLayoutPassword=findViewById(R.id.tInputPassword);
+        textInputLayoutPassword2=findViewById(R.id.tInputPasswordRipeti);
+
+        errortextView=new TextView(getApplicationContext());
+        errortextView.setTextSize(18);
+        layoutParams=new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.gravity= Gravity.CENTER;
+        //errortextView.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.error));
+        errortextView.setTypeface(null, Typeface.BOLD);
+        errortextView.setPadding(50,20,50,20);
+        errortextView.setTextColor(getColor(R.color.colorRed));
     }
 
     public void registra (View v){
+        String emailText=email.getText().toString();
+        String passwordText=password.getText().toString();
+        String passwordRipetiText = password2.getText().toString();
 
+        linearLayout.removeView(errortextView);
+        textInputLayoutEmail.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext));
+        textInputLayoutPassword.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext));
+        textInputLayoutPassword2.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext));
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
+            textInputLayoutEmail.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            errortextView.setText(R.string.formato_errato);
+            linearLayout.addView(errortextView,3,layoutParams);
+            return;
+        }
+        if (passwordText.equals("")){
+            textInputLayoutPassword.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            errortextView.setText(R.string.empty_password);
+            linearLayout.addView(errortextView,3,layoutParams);
+            return;
+        }
+        if (passwordRipetiText.equals("")){
+            textInputLayoutPassword2.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            errortextView.setText(R.string.empty_password2);
+            linearLayout.addView(errortextView,3,layoutParams);
+            return;
+        }
+        if (emailText.equals(MainActivity.getAccount().getEmail())){
+            textInputLayoutEmail.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            errortextView.setText(R.string.account_esistente);
+            linearLayout.addView(errortextView,3,layoutParams);
+            return;
+        }
+        if (!passwordRipetiText.equals(passwordText)){
+            textInputLayoutPassword.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            textInputLayoutPassword2.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
+            errortextView.setText(R.string.password_diverse);
+            linearLayout.addView(errortextView,3,layoutParams);
+            return;
+        }
     }
 }

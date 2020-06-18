@@ -27,9 +27,12 @@
 
     <!--Login Validation-->
     <string name="empty_email">Inserisci un email non vuota.</string>
+    <string name="formato_errato">Formato errato email</string>
     <string name="invalid_emailPassword">Email o password sbagliati.</string>
     <string name="empty_password">Inserisci una password non vuota.</string>
-
+    <string name="empty_password2">Ripeti la password.</string>
+    <string name="account_esistente">Account già esistente.</string>
+    <string name="password_diverse">Le password inserite non corrispondono.</string>
     <!--Pagine Valori-->
     <string name="pesticidi">Pesticidi</string>
     <string name="livello_pesticidi">Livello dei pesticidi</string>
