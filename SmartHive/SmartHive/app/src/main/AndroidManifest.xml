@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatoSalute"></activity>
+        <activity android:name=".StatoSalute" />
         <activity android:name=".Pesticidi" />
         <activity android:name=".Registrazione" />
         <activity android:name=".MainActivity">
