@@ -24,7 +24,6 @@
             android:layout_gravity="center|top"
             android:layout_marginTop="40dp"
             android:text="@string/login_dummy"
-            android:textStyle="bold"
             android:layout_marginBottom="20dp"
             />
 
@@ -111,6 +110,7 @@
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
                 android:text="@string/accedi"
+                android:fontFamily="@font/opensans_bold"
                 android:onClick="loginCliccato"/>
         </LinearLayout>
 
