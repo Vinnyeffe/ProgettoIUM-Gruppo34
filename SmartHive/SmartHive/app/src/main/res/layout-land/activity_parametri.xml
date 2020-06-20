@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Parametri">
+
+
+        <ImageButton
+            android:id="@+id/bin_hive"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/delete_hive_foreground"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp">
+        </ImageButton>
+
+
+        <TextView
+            android:id="@+id/text_arnia"
+            android:textSize="30dp"
+            android:textColor="@color/black_effective"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_marginTop="43dp"
+            android:layout_marginLeft="25dp"/>
+
+        <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="3"
+                android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/btn_clima"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/clima"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param" />
+                <Button
+                    android:id="@+id/btn_temperatura"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/temperatura"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param" />
+                <Button
+                    android:id="@+id/btn_risorse"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/risorse"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param" />
+                <Button
+                    android:id="@+id/btn_sciamatura"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/sciamatura"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param" />
+                <Button
+                    android:id="@+id/btn_salute"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/statoSalute"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param" />
+                <Button
+                    android:id="@+id/btn_pesticidi"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:text="@string/pesticidi"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/opensans_bold"
+                    android:layout_margin="9dp"
+                    android:onClick=""
+                    android:background="@drawable/button_param"/>
+            </GridLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav"
+            android:background="@drawable/bottom_bar"
+            app:itemIconTint="@color/black_effective"
+            app:itemTextColor="@color/black_effective" />
+
+    </RelativeLayout>
+</ScrollView>

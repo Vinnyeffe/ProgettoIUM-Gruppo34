@@ -3,19 +3,39 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/white">
         <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/text_rimozione"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sei sicuro di voler rimuovere l'arnia?"
+            android:text="@string/rimozione"
             android:textSize="20dp"
             android:textColor="@color/black_effective"
             android:fontFamily="@font/opensans_bold"
             android:textAlignment="center"/>
 
-        <Button
-            android:layout_width=""
-            android:layout_height=""/>
-        <Button
-            android:layout_width=""
-            android:layout_height=""/>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_below="@id/text_rimozione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_annulla"
+                    android:text="@string/no"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_primary_bg"/>
+                <Button
+                    android:id="@+id/btn_conferma"
+                    android:text="@string/si"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_confirm"/>
+
+        </LinearLayout>
 
 </RelativeLayout>

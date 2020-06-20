@@ -24,7 +24,7 @@
         android:fontFamily="@font/opensans_semibold"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Arnia 1"
+        android:text=""
         android:layout_marginTop="43dp"
         android:layout_marginLeft="25dp"/>
 
@@ -39,68 +39,62 @@
                 android:id="@+id/btn_clima"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Condizioni climatiche"
+                android:text="@string/clima"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_temperatura"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Temperatura interna"
+                android:text="@string/temperatura"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_risorse"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Risorse alimentari"
+                android:text="@string/risorse"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_sciamatura"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Sciamatura"
+                android:text="@string/sciamatura"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_salute"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Stato di salute"
+                android:text="@string/statoSalute"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_pesticidi"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="Pesticidi"
+                android:text="@string/pesticidi"
                 android:textColor="@color/white"
                 android:fontFamily="@font/opensans_bold"
                 android:layout_margin="9dp"
                 android:onClick=""
-                android:background="@drawable/button_param"
-                tools:ignore="OnClick" />
+                android:background="@drawable/button_param" />
         </GridLayout>
 
 

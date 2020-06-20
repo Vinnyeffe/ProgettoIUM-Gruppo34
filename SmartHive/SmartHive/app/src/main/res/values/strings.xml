@@ -40,8 +40,18 @@
     <string name="Contavoli">Conta voli</string>
     <string name="parassiti">Presenza parassiti</string>
     <string name="regina">Vitalità della regina</string>
+    <string name="temperatura">Temperatura interna</string>
+    <string name="clima">Condizioni climatiche</string>
+    <string name="risorse">Risorse alimentari</string>
+    <string name="sciamatura">Sciamatura</string>
+
     <!--button-->
     <string name="accedi">Accedi</string>
     <string name="submit">Submit</string>
+
+    <!--Rimozione Arnia-->
+    <string name="rimozione">Vuoi rimuovere in modo definitivo l\'arnia?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
 
 </resources>
