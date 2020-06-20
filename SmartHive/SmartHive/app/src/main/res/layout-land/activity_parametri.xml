@@ -59,29 +59,30 @@
                     android:layout_margin="9dp"
                     android:onClick=""
                     android:background="@drawable/button_param" />
+
                 <Button
                     android:id="@+id/btn_temperatura"
                     android:layout_height="140dp"
                     android:layout_width="140dp"
-                    android:text="@string/temperatura"
+                    android:text="@string/temperaturaInterna"
                     android:fontFamily="@font/opensans_bold"
                     android:textColor="@color/white"
                     android:layout_margin="9dp"
                     android:onClick=""
                     android:background="@drawable/button_param" />
 
-            <Button
-                android:id="@+id/btn_risorse"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="9dp"
-                android:background="@drawable/button_param"
-                android:fontFamily="@font/opensans_bold"
-                android:onClick=""
-                android:text="@string/risorse"
-                android:textColor="@color/white" />
+                <Button
+                    android:id="@+id/btn_risorse"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="9dp"
+                    android:background="@drawable/button_param"
+                    android:fontFamily="@font/opensans_bold"
+                    android:onClick=""
+                    android:text="@string/risorse"
+                    android:textColor="@color/white" />
 
-            <Button
+                 <Button
                     android:id="@+id/btn_sciamatura"
                     android:layout_height="140dp"
                     android:layout_width="140dp"
@@ -91,6 +92,7 @@
                     android:layout_margin="9dp"
                     android:onClick=""
                     android:background="@drawable/button_param" />
+
                 <Button
                     android:id="@+id/btn_salute"
                     android:layout_height="140dp"
@@ -101,6 +103,7 @@
                     android:layout_margin="9dp"
                     android:onClick=""
                     android:background="@drawable/button_param" />
+
                 <Button
                     android:id="@+id/btn_pesticidi"
                     android:layout_height="140dp"
@@ -111,6 +114,7 @@
                     android:layout_margin="9dp"
                     android:onClick=""
                     android:background="@drawable/button_param"/>
+
             </GridLayout>
 
 

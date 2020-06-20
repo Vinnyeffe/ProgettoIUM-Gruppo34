@@ -43,13 +43,13 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="Arnia 1"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_temperatura"
                 android:layout_height="150dp"
                 android:layout_width="150dp"
-                android:text="@string/temperatura"
+                android:text="@string/temperaturaInterna"
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"

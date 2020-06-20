@@ -33,6 +33,7 @@
     <string name="empty_password2">Ripeti la password.</string>
     <string name="account_esistente">Account già esistente.</string>
     <string name="password_diverse">Le password inserite non corrispondono.</string>
+
     <!--Pagine Valori-->
     <string name="pesticidi">Pesticidi</string>
     <string name="livello_pesticidi">Livello dei pesticidi</string>
@@ -40,10 +41,17 @@
     <string name="Contavoli">Conta voli</string>
     <string name="parassiti">Presenza parassiti</string>
     <string name="regina">Vitalità della regina</string>
-    <string name="temperatura">Temperatura interna</string>
+    <string name="temperaturaInterna">Temperatura interna</string>
     <string name="clima">Condizioni climatiche</string>
     <string name="risorse">Risorse alimentari</string>
     <string name="sciamatura">Sciamatura</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="precipitazioni">Probabilità precipitazioni</string>
+    <string name="umidita">Livello di umidità</string>
+    <string name="etaRegina">Età della regina</string>
+    <string name="livelloAnidride">Livello di anidride carbonica</string>
+    <string name="aumentoTemperatura">Aumento temperatura interna</string>
+    <string name="frequenzaSonora">Cambio frequenza sonora</string>
 
     <!--button-->
     <string name="accedi">Accedi</string>

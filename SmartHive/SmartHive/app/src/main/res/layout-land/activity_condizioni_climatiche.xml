@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CondizioniClimatiche">
+
+        <TextView
+            style="@style/TextStyle.Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="30dp"
+            android:text="@string/clima"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvTitle" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tvTitle"
+            android:text="@string/temperatura"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/tvTemperatura"
+            android:textSize="18sp" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_below="@id/tvTemperatura"
+            android:text="18 °C"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvValoreTemperatura"
+            android:textSize="24sp" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tvValoreTemperatura"
+            android:text="@string/precipitazioni"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/tvPrecipitazioni"
+            android:textSize="18sp" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_below="@id/tvPrecipitazioni"
+            android:text="20 %"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvValorePrecipitazioni"
+            android:textSize="24sp" />
+
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tvValorePrecipitazioni"
+            android:text="@string/umidita"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/tvUmidita"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/barraUmidita"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tvUmidita"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progress="15"
+            android:progressDrawable="@drawable/greenprogress"/>
+
+        <TextView
+            android:id="@+id/myTextProgressUmidita"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@id/barraUmidita"
+            android:layout_alignTop="@id/barraUmidita"
+            android:layout_alignRight="@id/barraUmidita"
+            android:layout_alignBottom="@id/barraUmidita"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="15%"
+            android:textSize="28dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav"
+            android:background="@drawable/bottom_bar"
+            app:itemIconTint="@color/black_effective"
+            app:itemTextColor="@color/black_effective" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,6 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sciamatura">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        style="@style/TextStyle.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:text="@string/sciamatura"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvTitle" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tvTitle"
+        android:text="@string/etaRegina"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvEtaRegina"
+        android:textSize="18sp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_below="@id/tvEtaRegina"
+        android:text="342 gg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvEtaReginaValore"
+        android:textSize="24sp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tvEtaReginaValore"
+        android:text="@string/livelloAnidride"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvAnidrideCarbonica"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/barraAnidrideCarbonica"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvAnidrideCarbonica"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progress="20"
+        android:progressDrawable="@drawable/greenprogress"/>
+
+    <TextView
+        android:id="@+id/myTextProgressAnidrideCarbonica"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/barraAnidrideCarbonica"
+        android:layout_alignTop="@id/barraAnidrideCarbonica"
+        android:layout_alignRight="@id/barraAnidrideCarbonica"
+        android:layout_alignBottom="@id/barraAnidrideCarbonica"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="20%"
+        android:textSize="28dp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/barraAnidrideCarbonica"
+        android:text="@string/aumentoTemperatura"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvAumentoTemperatura"
+        android:textSize="18sp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_below="@id/tvAumentoTemperatura"
+        android:text="+2°C"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvValoreAumento"
+        android:textSize="24sp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tvValoreAumento"
+        android:text="@string/frequenzaSonora"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvCambioFrequenzaSonora"
+        android:textSize="18sp" />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_below="@id/tvCambioFrequenzaSonora"
+        android:text="100 Hz"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvValoreCambioFrequenzaSonora"
+        android:textSize="24sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"
+        android:background="@drawable/bottom_bar"
+        app:itemIconTint="@color/black_effective"
+        app:itemTextColor="@color/black_effective" />
+
+</RelativeLayout>
