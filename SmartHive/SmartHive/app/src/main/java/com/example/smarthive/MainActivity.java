@@ -9,6 +9,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             linearLayout.addView(errortextView,2,layoutParams);
             return;
         }
-        Account accountLog=new Account(emailText,passwordText);
+        Account accountLog=new Account(/*"fabrizio.barra@smarthive.it","fabrizio"*/ emailText,passwordText);
 
         if (!accountLog.equals(account)){
             errortextView.setText(R.string.invalid_emailPassword);
@@ -85,10 +86,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        //Intent i=new Intent();
+        Intent i=new Intent();
+        i.setClass(this,HomePage.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
     }
 
     public static Account getAccount() {
         return account;
     }
+
+
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <ScrollView
+        android:id="@+id/scrollViewArnie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            >
+    <TextView
+        style="@style/TextStyle.Heading"
+        android:id="@+id/tvTitolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:text="@string/lista"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/aggiungiArniaButton"
+
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitolo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/bg_color"
+        android:drawableStart="@drawable/aggiungi_arnia_button"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/aggiunta_arnia"
+        android:textAllCaps="false"
+        android:textColorHighlight="#9E5454"
+        android:textColorHint="#D69090"
+        android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_below="@id/aggiungiArniaButton"
+            android:id="@+id/containerListaArnie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="100dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar"
+        app:itemIconTint="@color/black_effective"
+        app:itemTextColor="@color/black_effective"
+        app:menu="@menu/bottom_nav" />
+
+
+</RelativeLayout>

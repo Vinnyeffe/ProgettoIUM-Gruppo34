@@ -4,15 +4,16 @@
     android:layout_height="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/tastoHome"
         android:enabled="true"
         android:icon="@drawable/ic_outline_home_24"
         android:title="Home"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_nearby"
+        android:id="@+id/tastoImpostazioni"
         android:enabled="true"
         android:icon="@drawable/ic_outline_settings_24"
         android:title="Impostazioni"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+        android:onClick="impostazioniCliccato"/>
 </menu>

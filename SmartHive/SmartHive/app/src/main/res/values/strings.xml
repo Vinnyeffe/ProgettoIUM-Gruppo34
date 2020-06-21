@@ -61,5 +61,15 @@
     <string name="rimozione">Vuoi rimuovere in modo definitivo l\'arnia?</string>
     <string name="si">Si</string>
     <string name="no">No</string>
+    s
+    <!--HomePage-->
+    <string name="lista">Lista Arnie</string>
+    <string name="aggiunta_arnia">Aggiungi arnia</string>
+    <string name="title_activity_home_page">HomePage</string>
+
+    <!--Impostazioni-->
+    <string name="impostazioni_titolo">Impostazioni</string>
+    <string name="notifiche">Notifiche abilitate</string>
+    <string name="esci"><u>Esci</u></string>
 
 </resources>
