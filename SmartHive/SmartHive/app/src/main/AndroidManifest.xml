@@ -12,6 +12,7 @@
         <activity android:name=".Impostazioni"/>
         <activity android:name=".HomePage" />
         <activity android:name=".Registrazione" />
+        <activity android:name=".CondizioniClimatiche"/>
         <activity android:name=".Parametri" />
         <activity android:name=".Pesticidi" />
         <activity android:name=".Sciamatura" />

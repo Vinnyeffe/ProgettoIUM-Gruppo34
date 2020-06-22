@@ -7,13 +7,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.text.InputFilter;
 import android.text.InputType;
@@ -87,16 +91,23 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-    void creaArnia(String nomeArnia){
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    void creaArnia(final String nomeArnia){
         LinearLayout ll = new LinearLayout(this);
         getLayoutInflater().inflate(R.layout.list_element,ll);
         Button buttonArnia = ll.findViewById(R.id.buttonArnia);
+        buttonArnia.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_param));
         buttonArnia.setText("Arnia "+nomeArnia);
+        Typeface face = getResources().getFont(R.font.opensans_bold);
+        buttonArnia.setTypeface(face);
+
+        buttonArnia.setTextColor(getResources().getColor(R.color.white));
         buttonArnia.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),Parametri.class);
+                i.putExtra("codice", nomeArnia);
                 startActivity(i);
             }
         });

@@ -19,6 +19,7 @@
 
     <TextView
         android:id="@+id/text_arnia"
+        style="@style/TextStyle.Heading"
         android:textSize="22sp"
         android:textColor="@color/black_effective"
         android:fontFamily="@font/opensans_semibold"
@@ -43,7 +44,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick="Arnia 1"
+                android:onClick="climaCliccato"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_temperatura"
@@ -53,7 +54,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="temperaturaCliccato"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_risorse"
@@ -63,7 +64,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="risorseCliccato"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_sciamatura"
@@ -73,7 +74,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="sciamaturaCliccato"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_salute"
@@ -83,7 +84,7 @@
                 android:fontFamily="@font/opensans_bold"
                 android:textColor="@color/white"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="saluteCliccato"
                 android:background="@drawable/button_param" />
             <Button
                 android:id="@+id/btn_pesticidi"
@@ -93,7 +94,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/opensans_bold"
                 android:layout_margin="9dp"
-                android:onClick=""
+                android:onClick="pesticidiCliccato"
                 android:background="@drawable/button_param" />
         </GridLayout>
 

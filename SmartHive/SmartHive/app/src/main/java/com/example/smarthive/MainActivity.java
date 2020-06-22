@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         layoutParams=new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         layoutParams.gravity= Gravity.CENTER;
-        //errortextView.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.error));
         errortextView.setTypeface(null, Typeface.BOLD);
         errortextView.setPadding(50,20,50,20);
         errortextView.setTextColor(getColor(R.color.colorRed));
