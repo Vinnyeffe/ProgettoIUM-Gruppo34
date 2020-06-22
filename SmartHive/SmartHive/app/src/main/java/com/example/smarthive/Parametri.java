@@ -1,6 +1,8 @@
 package com.example.smarthive;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -27,5 +29,17 @@ public class Parametri extends AppCompatActivity {
 
     public void openDialog(){
 
+    }
+
+    public void impostazioniCliccato(MenuItem item){
+        Intent i = new Intent(this,Impostazioni.class);
+        startActivity(i);
+    }
+
+
+    public void homeCliccato(MenuItem item){
+        Intent i = new Intent(this, HomePage.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP );
+        startActivity(i);
     }
 }

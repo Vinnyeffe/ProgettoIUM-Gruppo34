@@ -64,6 +64,7 @@
                     android:paddingBottom="10dp"
                     android:textSize="16sp"
                     android:drawableLeft="@drawable/ic_outline_account_circle_24"
+
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -96,7 +97,8 @@
                     android:paddingBottom="10dp"
                     android:textColor="@color/black_effective"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_outline_lock_24"/>
+                    android:drawableLeft="@drawable/ic_outline_lock_24"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 

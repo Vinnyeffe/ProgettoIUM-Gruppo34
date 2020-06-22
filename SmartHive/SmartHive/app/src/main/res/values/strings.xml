@@ -72,4 +72,8 @@
     <string name="notifiche">Notifiche abilitate</string>
     <string name="esci"><u>Esci</u></string>
 
+    <!--SharedPreferences-->
+    <string name="file_utenti">utenti</string>
+    <string name="file_arnie">arnie</string>
+
 </resources>

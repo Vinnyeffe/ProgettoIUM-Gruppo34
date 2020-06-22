@@ -2,12 +2,14 @@ package com.example.smarthive;
 
 import androidx.annotation.Nullable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Account {
+public class Account implements Serializable {
     private String email;
     private String password;
     private ArrayList<String> arnie;
+    final static long serialVersionUID = 1L;
 
     public Account(String email, String password) {
         this.email = email;

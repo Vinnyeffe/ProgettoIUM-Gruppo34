@@ -17,13 +17,20 @@ public class Impostazioni extends AppCompatActivity {
 
     public void esciCliccato(View v){
         Intent i = new Intent(this,MainActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );
         startActivity(i);
     }
 
 
     public void impostazioniCliccato(MenuItem item){
         Intent i = new Intent(this,Impostazioni.class);
+        startActivity(i);
+    }
+
+
+    public void homeCliccato(MenuItem item){
+        Intent i = new Intent(this, HomePage.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP );
         startActivity(i);
     }
 }

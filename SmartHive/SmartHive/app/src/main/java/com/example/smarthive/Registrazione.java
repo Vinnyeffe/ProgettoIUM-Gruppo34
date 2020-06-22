@@ -4,6 +4,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -54,6 +57,8 @@ public class Registrazione extends AppCompatActivity {
         String emailText=email.getText().toString();
         String passwordText=password.getText().toString();
         String passwordRipetiText = password2.getText().toString();
+        SharedPreferences spUtenti = getSharedPreferences(getResources().getString(R.string.file_utenti), Context.MODE_PRIVATE);
+        String password = spUtenti.getString(emailText,null);
 
         linearLayout.removeView(errortextView);
         textInputLayoutEmail.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext));
@@ -78,7 +83,7 @@ public class Registrazione extends AppCompatActivity {
             linearLayout.addView(errortextView,3,layoutParams);
             return;
         }
-        if (emailText.equals(MainActivity.getAccount().getEmail())){
+        if (password!=null){
             textInputLayoutEmail.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.edittext_error));
             errortextView.setText(R.string.account_esistente);
             linearLayout.addView(errortextView,3,layoutParams);
@@ -91,5 +96,15 @@ public class Registrazione extends AppCompatActivity {
             linearLayout.addView(errortextView,3,layoutParams);
             return;
         }
+
+        SharedPreferences.Editor editor = spUtenti.edit();
+        editor.putString(emailText,passwordText);
+        editor.commit();
+
+        Intent i=new Intent();
+        i.setClass(this,HomePage.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.putExtra("account",new Account(emailText,passwordText));
+        startActivity(i);
     }
 }

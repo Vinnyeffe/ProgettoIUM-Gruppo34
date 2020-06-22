@@ -8,7 +8,8 @@
         android:enabled="true"
         android:icon="@drawable/ic_outline_home_24"
         android:title="Home"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+        android:onClick="homeCliccato"/>
     <item
         android:id="@+id/tastoImpostazioni"
         android:enabled="true"

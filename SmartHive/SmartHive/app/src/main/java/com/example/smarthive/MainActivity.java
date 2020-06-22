@@ -4,7 +4,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,9 +22,11 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-    public static Account account;
+
     private TextInputEditText email;
     private TextInputEditText password;
     private LinearLayout linearLayout;
@@ -50,7 +54,12 @@ public class MainActivity extends AppCompatActivity {
         errortextView.setTypeface(null, Typeface.BOLD);
         errortextView.setPadding(50,20,50,20);
         errortextView.setTextColor(getColor(R.color.colorRed));
-        account=new Account("fabrizio.barra@smarthive.it","fabrizio");
+
+
+        SharedPreferences spUtenti = getSharedPreferences(getResources().getString(R.string.file_utenti),Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = spUtenti.edit();
+        editor.putString("fabriziobarra@smarthive.it","fabrizio");
+        editor.commit();
     }
 
     public void registratiCliccato(View v){
@@ -80,21 +89,33 @@ public class MainActivity extends AppCompatActivity {
         }
         Account accountLog=new Account(/*"fabrizio.barra@smarthive.it","fabrizio"*/ emailText,passwordText);
 
-        if (!accountLog.equals(account)){
+        SharedPreferences spUtenti = getSharedPreferences(getResources().getString(R.string.file_utenti),Context.MODE_PRIVATE);
+        String password = spUtenti.getString(emailText,null);
+        System.out.println(emailText+" "+password);
+
+        if (password == null || !passwordText.equals(password)){
             errortextView.setText(R.string.invalid_emailPassword);
             linearLayout.addView(errortextView,2,layoutParams);
             return;
         }
 
+        SharedPreferences spArnie = getSharedPreferences(getResources().getString(R.string.file_arnie),Context.MODE_PRIVATE);
+        ArrayList<String> arnie = new ArrayList<String>(spArnie.getStringSet(emailText,new HashSet<String>()));
+        accountLog.setArnie(arnie);
+        for(String s : arnie){
+            System.out.println(s);
+        }
+
         Intent i=new Intent();
         i.setClass(this,HomePage.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.putExtra("account",accountLog);
         startActivity(i);
     }
 
-    public static Account getAccount() {
+    /*public static Account getAccount() {
         return account;
-    }
+    }*/
 
 
 }
