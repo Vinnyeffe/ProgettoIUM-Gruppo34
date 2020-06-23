@@ -6,13 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ToggleButton;
 
 public class Impostazioni extends AppCompatActivity {
-
+    ToggleButton toggleButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impostazioni);
+        findViewById(R.id.tastoImpostazioni).setBackgroundColor(getResources().getColor(R.color.light_gray));
+        findViewById(R.id.tastoImpostazioni).setEnabled(false);
     }
 
     public void esciCliccato(View v){

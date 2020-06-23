@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Impostazioni"/>
+        <activity android:name=".RisorseAlimentari"></activity>
+        <activity android:name=".TemperaturaInterna" />
+        <activity android:name=".Impostazioni" />
         <activity android:name=".HomePage" />
         <activity android:name=".Registrazione" />
-        <activity android:name=".CondizioniClimatiche"/>
+        <activity android:name=".CondizioniClimatiche" />
         <activity android:name=".Parametri" />
         <activity android:name=".Pesticidi" />
         <activity android:name=".Sciamatura" />

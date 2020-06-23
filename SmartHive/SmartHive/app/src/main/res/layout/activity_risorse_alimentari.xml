@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RisorseAlimentari">
+
+    <TextView
+        style="@style/TextStyle.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:text="@string/RisorseAlimentari"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvRisorseAlimentari"
+        />
+
+    <TextView
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tvRisorseAlimentari"
+        android:text="@string/livello_RisorseAlimentari"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvLivelloRisorseAlimentari"
+        android:textSize="18sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/barraRisorseAlimentari"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvLivelloRisorseAlimentari"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progress="70"
+        android:progressDrawable="@drawable/greenprogress"/>
+
+    <TextView
+        android:id="@+id/myTextProgress"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/barraRisorseAlimentari"
+        android:layout_alignTop="@id/barraRisorseAlimentari"
+        android:layout_alignRight="@id/barraRisorseAlimentari"
+        android:layout_alignBottom="@id/barraRisorseAlimentari"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="70%"
+        android:textSize="28dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"
+        android:background="@drawable/bottom_bar"
+        app:itemIconTint="@color/black_effective"
+        app:itemTextColor="@color/black_effective" />
+
+</RelativeLayout>

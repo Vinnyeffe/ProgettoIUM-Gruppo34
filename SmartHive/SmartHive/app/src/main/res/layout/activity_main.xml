@@ -56,16 +56,16 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/input_border_bottom"
                     android:cursorVisible="true"
+                    android:drawableLeft="@drawable/ic_outline_account_circle_24"
                     android:gravity="center|left|bottom"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:maxLength="50"
                     android:paddingTop="5dp"
                     android:paddingBottom="10dp"
-                    android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_outline_account_circle_24"
+                    android:text="fabriziobarra@smarthive.it"
 
-                    />
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,19 +86,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/input_border_bottom"
                     android:cursorVisible="true"
+                    android:drawableLeft="@drawable/ic_outline_lock_24"
                     android:gravity="center|left|bottom"
                     android:inputType="textPassword"
                     android:maxLength="50"
                     android:paddingTop="5dp"
                     android:paddingBottom="10dp"
+                    android:text="fabrizio"
                     android:textColor="@color/black_effective"
-                    android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_outline_lock_24"
-                    />
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

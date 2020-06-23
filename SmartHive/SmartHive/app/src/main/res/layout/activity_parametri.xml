@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Parametri">
-
-
-    <ImageButton
-        android:id="@+id/bin_hive"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
-        android:background="@drawable/delete_hive_foreground"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp">
-    </ImageButton>
-
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp">
+    <RelativeLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llRigaSuperiore"
+        android:paddingStart="20dp">
     <TextView
+        android:layout_centerVertical="true"
         android:id="@+id/text_arnia"
         style="@style/TextStyle.Heading"
         android:textSize="22sp"
@@ -26,79 +28,94 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text=""
-        android:layout_marginTop="43dp"
-        android:layout_marginLeft="25dp"/>
+        android:layout_alignParentStart="true"
+        />
 
+        <ImageButton
+            android:id="@+id/bin_hive"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/delete_hive_foreground"
+            android:layout_alignParentEnd="true">
+        </ImageButton>
+    </RelativeLayout>
     <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:rowCount="3"
-            android:columnCount="2"
-            android:layout_centerInParent="true">
+        android:layout_below="@id/llRigaSuperiore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="2"
+        android:rowCount="3">
 
-            <Button
-                android:id="@+id/btn_clima"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/clima"
-                android:fontFamily="@font/opensans_bold"
-                android:textColor="@color/white"
-                android:layout_margin="9dp"
-                android:onClick="climaCliccato"
-                android:background="@drawable/button_param" />
-            <Button
-                android:id="@+id/btn_temperatura"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/temperaturaInterna"
-                android:fontFamily="@font/opensans_bold"
-                android:textColor="@color/white"
-                android:layout_margin="9dp"
-                android:onClick="temperaturaCliccato"
-                android:background="@drawable/button_param" />
-            <Button
-                android:id="@+id/btn_risorse"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/risorse"
-                android:fontFamily="@font/opensans_bold"
-                android:textColor="@color/white"
-                android:layout_margin="9dp"
-                android:onClick="risorseCliccato"
-                android:background="@drawable/button_param" />
-            <Button
-                android:id="@+id/btn_sciamatura"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/sciamatura"
-                android:fontFamily="@font/opensans_bold"
-                android:textColor="@color/white"
-                android:layout_margin="9dp"
-                android:onClick="sciamaturaCliccato"
-                android:background="@drawable/button_param" />
-            <Button
-                android:id="@+id/btn_salute"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/statoSalute"
-                android:fontFamily="@font/opensans_bold"
-                android:textColor="@color/white"
-                android:layout_margin="9dp"
-                android:onClick="saluteCliccato"
-                android:background="@drawable/button_param" />
-            <Button
-                android:id="@+id/btn_pesticidi"
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                android:text="@string/pesticidi"
-                android:textColor="@color/white"
-                android:fontFamily="@font/opensans_bold"
-                android:layout_margin="9dp"
-                android:onClick="pesticidiCliccato"
-                android:background="@drawable/button_param" />
-        </GridLayout>
+        <Button
+            android:id="@+id/btn_clima"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="climaCliccato"
+            android:text="@string/clima"
+            android:textColor="@color/white" />
 
+        <Button
+            android:id="@+id/btn_temperatura"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="temperaturaCliccato"
+            android:text="@string/temperaturaInterna"
+            android:textColor="@color/white" />
 
+        <Button
+            android:id="@+id/btn_risorse"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="risorseCliccato"
+            android:text="@string/risorse"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_sciamatura"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="sciamaturaCliccato"
+            android:text="@string/sciamatura"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_salute"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="saluteCliccato"
+            android:text="@string/statoSalute"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_pesticidi"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/button_param"
+            android:fontFamily="@font/opensans_bold"
+            android:onClick="pesticidiCliccato"
+            android:text="@string/pesticidi"
+            android:textColor="@color/white" />
+    </GridLayout>
+
+    </RelativeLayout>
+</ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

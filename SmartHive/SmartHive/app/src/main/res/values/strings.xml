@@ -76,4 +76,15 @@
     <string name="file_utenti">utenti</string>
     <string name="file_arnie">arnie</string>
 
+    <!--Temperatura interna-->
+    <string name="storicoTemperature">Storico temperature</string>
+
+    <!--Risorse alimentari-->
+    <string name="RisorseAlimentari">Risorse Alimentari</string>
+    <string name="livello_RisorseAlimentari">Livello delle risorse</string>
+    <string name="aggiunta">Inserisci il codice dell\'arnia da aggiungere:</string>
+    <string name="codice">Codice numerico</string>
+    <string name="conferma">Conferma</string>
+    <string name="annulla">Annulla</string>
+
 </resources>

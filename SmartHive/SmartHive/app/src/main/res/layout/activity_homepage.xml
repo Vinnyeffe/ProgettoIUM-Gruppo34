@@ -4,11 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
->
+    android:layout_height="match_parent">
 
     <ScrollView
-        android:id="@+id/scrollViewArnie"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -18,8 +17,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            >
+            android:layout_marginBottom="100dp">
     <TextView
         style="@style/TextStyle.Heading"
         android:id="@+id/tvTitolo"

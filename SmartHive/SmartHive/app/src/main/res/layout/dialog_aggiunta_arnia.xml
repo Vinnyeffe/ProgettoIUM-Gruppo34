@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/sfondo_dialog"
+    android:padding="20dp">
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/text_aggiunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aggiunta"
+        android:textSize="20dp"
+        android:textColor="@color/black_effective"
+        android:fontFamily="@font/opensans_bold"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_codice"
+        style="@style/TextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/input_border_bottom"
+        android:cursorVisible="true"
+
+        android:layout_below="@id/text_aggiunta"
+        android:hint="@string/codice"
+        android:inputType="number"
+        android:maxLength="9"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+
+
+        android:textSize="16sp" />
+    <LinearLayout
+
+        android:layout_marginTop="25dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_below="@id/et_codice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_annulla"
+            android:text="@string/annulla"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_primary_bg"/>
+        <Button
+            android:id="@+id/btn_conferma"
+            android:text="@string/conferma"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_confirm"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
