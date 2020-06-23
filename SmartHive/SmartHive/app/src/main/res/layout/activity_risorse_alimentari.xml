@@ -41,8 +41,8 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/tvLivelloRisorseAlimentari"
         style="@android:style/Widget.ProgressBar.Horizontal"
-        android:progress="70"
-        android:progressDrawable="@drawable/greenprogress"/>
+        android:progress="20"
+        android:progressDrawable="@drawable/redprogress"/>
 
     <TextView
         android:id="@+id/myTextProgress"
@@ -54,7 +54,7 @@
         android:layout_alignBottom="@id/barraRisorseAlimentari"
         android:background="@android:color/transparent"
         android:gravity="center"
-        android:text="70%"
+        android:text="20%"
         android:textSize="28dp"
         />
 

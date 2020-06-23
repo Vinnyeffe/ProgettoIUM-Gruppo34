@@ -29,12 +29,14 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/button_primary_bg"/>
                 <Button
                     android:id="@+id/btn_conferma"
                     android:text="@string/si"
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_confirm"/>
 

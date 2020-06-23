@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/aggiunta"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:textColor="@color/black_effective"
         android:fontFamily="@font/opensans_bold"
         android:textAlignment="center"/>
@@ -17,6 +17,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_codice"
         style="@style/TextStyle"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -48,12 +49,14 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:background="@drawable/button_primary_bg"/>
         <Button
             android:id="@+id/btn_conferma"
             android:text="@string/conferma"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_confirm"/>
 
