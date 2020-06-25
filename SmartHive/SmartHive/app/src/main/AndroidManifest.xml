@@ -15,7 +15,8 @@
         <activity android:name=".HomePage" />
         <activity android:name=".Registrazione" />
         <activity android:name=".CondizioniClimatiche" />
-        <activity android:name=".Parametri" />
+        <activity android:name=".Parametri"
+            android:parentActivityName=".HomePage" />
         <activity android:name=".Pesticidi" />
         <activity android:name=".Sciamatura" />
         <activity android:name=".StatoSalute" />

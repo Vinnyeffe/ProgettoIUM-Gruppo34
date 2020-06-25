@@ -25,6 +25,8 @@ import java.util.List;
 import java.util.Random;
 
 public class TemperaturaInterna extends AppCompatActivity {
+    private Account accountAttivo;
+    private String codiceArnia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,11 @@ public class TemperaturaInterna extends AppCompatActivity {
 
         List<DataEntry> data = new ArrayList<>();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent intent=getIntent();
+        accountAttivo = (Account) intent.getSerializableExtra("account");
+        codiceArnia=intent.getStringExtra("codice");
 
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM");
@@ -90,6 +97,19 @@ public class TemperaturaInterna extends AppCompatActivity {
         Intent i = new Intent(this, HomePage.class);
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP );
         startActivity(i);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent i=new Intent(getApplicationContext(),Parametri.class);
+                i.putExtra("account", accountAttivo);
+                i.putExtra("codice",codiceArnia);
+                startActivity(i);
+                break;
+        }
+        return true;
     }
 
 }

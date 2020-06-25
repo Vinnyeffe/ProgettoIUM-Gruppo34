@@ -19,10 +19,13 @@ public class Parametri extends AppCompatActivity {
     ImageButton binIcon;
     TextView text_arnia;
     Account accountAttivo;
+    String codiceArnia;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parametri);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //popup rimozione arnia
         binIcon = (ImageButton) findViewById(R.id.bin_hive);
@@ -36,9 +39,23 @@ public class Parametri extends AppCompatActivity {
 
         text_arnia=findViewById(R.id.text_arnia);
         Intent i=getIntent();
+        codiceArnia=i.getStringExtra("codice");
         text_arnia.setText("Arnia "+i.getStringExtra("codice"));
         accountAttivo = (Account) i.getSerializableExtra("account");
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent i=new Intent(getApplicationContext(),HomePage.class);
+                i.putExtra("account", accountAttivo);
+                startActivity(i);
+                break;
+        }
+        return true;
+    }
+
 
     public void openDialog(){
         View view = this.getLayoutInflater().inflate(R.layout.dialog_rimozione_arnia,null);
@@ -83,31 +100,43 @@ public class Parametri extends AppCompatActivity {
 
     public void climaCliccato(View v){
         Intent i = new Intent(getApplicationContext(), CondizioniClimatiche.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 
     public void temperaturaCliccato(View v){
         Intent i = new Intent(getApplicationContext(), TemperaturaInterna.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 
     public void saluteCliccato(View v){
         Intent i = new Intent(getApplicationContext(), StatoSalute.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 
     public void risorseCliccato(View v){
         Intent i = new Intent(getApplicationContext(), RisorseAlimentari.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 
     public void sciamaturaCliccato(View v){
         Intent i = new Intent(getApplicationContext(), Sciamatura.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 
     public void pesticidiCliccato(View v){
         Intent i = new Intent(getApplicationContext(), Pesticidi.class);
+        i.putExtra("account",accountAttivo);
+        i.putExtra("codice", codiceArnia);
         startActivity(i);
     }
 }

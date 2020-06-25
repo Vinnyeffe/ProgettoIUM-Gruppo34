@@ -7,13 +7,31 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CondizioniClimatiche extends AppCompatActivity {
+    private Account accountAttivo;
+    private String codiceArnia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_condizioni_climatiche);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Intent i=getIntent();
+        accountAttivo = (Account) i.getSerializableExtra("account");
+        codiceArnia=i.getStringExtra("codice");
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent i=new Intent(getApplicationContext(),Parametri.class);
+                i.putExtra("account", accountAttivo);
+                i.putExtra("codice",codiceArnia);
+                startActivity(i);
+                break;
+        }
+        return true;
     }
 
     public void impostazioniCliccato(MenuItem item){
