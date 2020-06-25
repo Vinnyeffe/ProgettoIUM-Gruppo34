@@ -123,6 +123,7 @@ public class HomePage extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),Parametri.class);
                 i.putExtra("codice", nomeArnia);
                 i.putExtra("account",accountAttivo);
+                i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(i);
             }
         });

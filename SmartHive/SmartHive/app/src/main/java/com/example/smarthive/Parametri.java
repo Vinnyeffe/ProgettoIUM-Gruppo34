@@ -102,6 +102,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), CondizioniClimatiche.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 
@@ -109,6 +110,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), TemperaturaInterna.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 
@@ -116,6 +118,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), StatoSalute.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 
@@ -123,6 +126,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), RisorseAlimentari.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 
@@ -130,6 +134,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), Sciamatura.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 
@@ -137,6 +142,7 @@ public class Parametri extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), Pesticidi.class);
         i.putExtra("account",accountAttivo);
         i.putExtra("codice", codiceArnia);
+        i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(i);
     }
 }

@@ -34,6 +34,7 @@ public class Pesticidi extends AppCompatActivity {
                 Intent i=new Intent(getApplicationContext(),Parametri.class);
                 i.putExtra("account", accountAttivo);
                 i.putExtra("codice",codiceArnia);
+                i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(i);
                 break;
         }
