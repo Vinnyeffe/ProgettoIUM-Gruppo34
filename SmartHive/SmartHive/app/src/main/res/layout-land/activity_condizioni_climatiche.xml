@@ -97,7 +97,8 @@
             android:layout_below="@id/tvUmidita"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:progress="15"
-            android:progressDrawable="@drawable/greenprogress"/>
+            android:progressDrawable="@drawable/greenprogress"
+            android:layout_marginBottom="70dp"/>
 
         <TextView
             android:id="@+id/myTextProgressUmidita"

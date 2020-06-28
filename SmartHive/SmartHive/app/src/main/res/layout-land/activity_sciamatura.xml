@@ -133,7 +133,7 @@
             android:layout_below="@id/tvCambioFrequenzaSonora"
             android:text="100 Hz"
             android:layout_marginLeft="30dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="70dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/tvValoreCambioFrequenzaSonora"
             android:textSize="24sp" />

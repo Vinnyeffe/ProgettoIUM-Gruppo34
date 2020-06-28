@@ -114,6 +114,7 @@
         android:layout_below="@id/tvRegina"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progress="82"
+        android:layout_marginBottom="70dp"
         android:progressDrawable="@drawable/greenprogress"/>
 
     <TextView
